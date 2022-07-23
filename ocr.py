@@ -123,7 +123,8 @@ class FormWindow(QMainWindow):
         qp.setBrush(QtGui.QBrush(QtGui.QColor(100, 10, 10, 40)))
         self.pixmap = QPixmap.fromImage(self.img_qt).scaled(self.swidth, self.sheight, aspectRatioMode=Qt.AspectRatioMode.IgnoreAspectRatio, transformMode=Qt.TransformationMode.SmoothTransformation)
         qpimg = QtGui.QPainter(self.pixmap)
-        qpimg.setFont(QtGui.QFont("Arial", 15))
+        qpimg.setPen(QColor(255, 34, 3))
+        qpimg.setFont(QtGui.QFont("Arial", 20))
         qpimg.setBrush(QtGui.QBrush(QtGui.QColor(100, 10, 10, 40)))
         for b in self.boxes:
             qpimg.drawRect(QRect(QPoint(b.left, b.upper),QPoint(b.right, b.lower)))
